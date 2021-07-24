@@ -52,11 +52,11 @@ function draw() {
 
   // eyes
   fill(255, 255, 255);
-  ellipse(190, 140, 10, 10);
-  ellipse(210, 140, 10, 10);
+  ellipse(bodyX - 10, bodyY - 80, 10, 10);
+  ellipse(bodyX + 10, bodyY - 80, 10, 10);
   fill(0, 0, 0);
-  ellipse(190, 140, 5, 5);
-  ellipse(210, 140, 5, 5);
+  ellipse(bodyX - 10, bodyY - 80, 5, 5);
+  ellipse(bodyX + 10, bodyY - 80, 5, 5);
   
   if (frameCount % 3 == 0) {
     bodyY++;
