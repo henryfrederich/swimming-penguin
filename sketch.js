@@ -2,6 +2,8 @@ var bodyX = 200;
 var bodyY = 220;
 var bodyW = 150;
 var faceW = bodyW/3;
+var dX = 0;
+var dY = 0;
 
 function setup() {
   // put setup code here
@@ -58,8 +60,10 @@ function draw() {
   ellipse(bodyX - 10, bodyY - 80, 5, 5);
   ellipse(bodyX + 10, bodyY - 80, 5, 5);
   
-  if (frameCount % 3 == 0) {
-    bodyY++;
-    bodyX++;
+  if (frameCount % 25 == 0) {
+    dX = random(-1, 1);
+    dY = random(-1, 1);
   }
+  bodyY += dY;
+  bodyX += dX;
 }
