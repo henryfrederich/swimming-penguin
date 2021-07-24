@@ -28,7 +28,7 @@ function draw() {
 
   // Wings
   fill(0, 0, 0);
-  arc(200, 200, 200, 50, PI, 0);
+  arc(bodyX, bodyY - 20, 200, 50, PI, 0);
   
   // body
   fill(0, 0, 0);
