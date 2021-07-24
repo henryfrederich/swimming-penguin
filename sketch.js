@@ -36,7 +36,7 @@ function draw() {
   
   // belly
   fill(255, 255, 255);
-  ellipse(bodyX, 200, 50, 75);
+  ellipse(bodyX, bodyY - 20, 50, 75);
 
   // head
   fill(0, 0, 0);
@@ -53,7 +53,9 @@ function draw() {
   fill(0, 0, 0);
   ellipse(190, 140, 5, 5);
   ellipse(210, 140, 5, 5);
-
-  // bodyY++;
-  // bodyX++;
+  
+  if (frameCount % 3 == 0) {
+    bodyY++;
+    bodyX++;
+  }
 }
