@@ -1,3 +1,8 @@
+var bodyX = 200;
+var bodyY = 220;
+var bodyW = 150;
+var faceW = bodyW/3;
+
 function setup() {
   // put setup code here
   createCanvas(400, 400);
@@ -6,16 +11,20 @@ function setup() {
 function draw() {
   // put drawing code here
   noStroke();
-  var bodyX = 200;
-  var bodyY = 220;
-  var bodyW = 150;
-  var faceW = bodyW/3;
   background(207, 254, 255);
 
   // Left and right feet
   fill(255, 100, 0);
-  triangle(150, 275, 200, 275, 175, 220);
-  triangle(200, 275, 250, 275, 225, 220);
+  triangle(
+    bodyX - 50, bodyY + 55,
+    bodyX, bodyY + 55,
+    bodyX - 25, bodyY,
+  );
+  triangle(
+    bodyX     , bodyY + 55,
+    bodyX + 50, bodyY + 55,
+    bodyX + 25, bodyY,
+  );
 
   // Wings
   fill(0, 0, 0);
@@ -44,4 +53,7 @@ function draw() {
   fill(0, 0, 0);
   ellipse(190, 140, 5, 5);
   ellipse(210, 140, 5, 5);
+
+  // bodyY++;
+  // bodyX++;
 }
