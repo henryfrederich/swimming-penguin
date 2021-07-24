@@ -15,7 +15,7 @@ function draw() {
   triangle(150, 275, 200, 275, 175, 220);
   triangle(200, 275, 250, 275, 225, 220);
   fill(0, 0, 0);
-  arc(200, 200, 200, 50, 175, 375);
+  arc(200, 200, 200, 50, PI, 0);
   ellipse(bodyX, bodyY-20, faceW+25, 100); // body
   fill(255, 255, 255);
   ellipse(bodyX, 200, 50, 75);
