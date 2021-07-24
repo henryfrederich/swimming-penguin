@@ -44,7 +44,11 @@ function draw() {
 
   // beak
   fill(255, 150, 0);
-  triangle(215, 150, 185, 150, 200, 175);
+  triangle(
+    bodyX + 15, bodyY - 70,
+    bodyX - 15, bodyY - 70,
+    bodyX     , bodyY - 45,
+  );
 
   // eyes
   fill(255, 255, 255);
