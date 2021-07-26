@@ -64,19 +64,19 @@ function draw() {
   if (frameCount % 30 == 0) {
     
     if (bodyX <= 0) {
-        dX = 1;
+        dX = 3;
     } else if (bodyX >= width) {
-        dX = -1;
+        dX = -3;
     } else {
-        dX = random(-1, 1);
+        dX = random(-2, 2);
     }
 
     if (bodyY <= 0) {
-        dY = 1;
+        dY = 3;
     } else if (bodyY >= height) {
-        dY = -1;
+        dY = -3;
     } else {
-        dY = random(-1, 1);
+        dY = random(-2, 2);
     }
   }
   bodyY += dY;
