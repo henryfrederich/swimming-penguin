@@ -1,5 +1,5 @@
-var bodyX = 200;
-var bodyY = 220;
+var bodyX = 0;
+var bodyY = 0;
 var bodyW = 150;
 var faceW = bodyW/3;
 var dX = 0;
@@ -7,7 +7,9 @@ var dY = 0;
 
 function setup() {
   // put setup code here
-  createCanvas(400, 400);
+  createCanvas(800, 600);
+  bodyX = floor(width/2);
+  bodyY = floor(height/2);
 }
 
 function draw() {
