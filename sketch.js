@@ -60,9 +60,24 @@ function draw() {
   ellipse(bodyX - 10, bodyY - 80, 5, 5);
   ellipse(bodyX + 10, bodyY - 80, 5, 5);
   
-  if (frameCount % 25 == 0) {
-    dX = random(-1, 1);
-    dY = random(-1, 1);
+  // Every half a second change directions at random
+  if (frameCount % 30 == 0) {
+    
+    if (bodyX <= 0) {
+        dX = 1;
+    } else if (bodyX >= width) {
+        dX = -1;
+    } else {
+        dX = random(-1, 1);
+    }
+
+    if (bodyY <= 0) {
+        dY = 1;
+    } else if (bodyY >= height) {
+        dY = -1;
+    } else {
+        dY = random(-1, 1);
+    }
   }
   bodyY += dY;
   bodyX += dX;
